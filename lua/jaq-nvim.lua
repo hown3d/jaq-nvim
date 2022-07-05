@@ -80,7 +80,7 @@ function M.setup(user_options) config = vim.tbl_deep_extend('force', config, use
 
 local function internal()
   local cmd = config.cmds.internal[vim.bo.filetype]
-  if not cmd then
+  if cmd == nil then
     vim.cmd("echohl ErrorMsg | echo 'Error: Invalid command' | echohl None")
     return
   end
@@ -92,7 +92,7 @@ end
 
 local function run(type)
   local cmd = config.cmds.external[vim.bo.filetype]
-  if not cmd then
+  if cmd == nil then
     vim.cmd("echohl ErrorMsg | echo 'Error: Invalid command' | echohl None")
     return
   end
