@@ -142,6 +142,3 @@ function M.Jaq(type)
 end
 
 return M
-return M
-return M
-return M
