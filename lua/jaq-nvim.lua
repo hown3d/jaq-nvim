@@ -49,13 +49,12 @@ local function subsitute(cmd)
   return cmd
 end
 
-local function execute_if_function(cmd) then
+local function execute_if_function(cmd)
   if type(cmd) == "function" then
     return cmd()
   end
   return cmd
 end
-
 
 local function floatingWin(cmd)
   M.buf = vim.api.nvim_create_buf(false, true)
